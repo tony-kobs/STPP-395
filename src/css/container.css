@@ -4,7 +4,7 @@
   min-width: 320px;
   max-width: 375px;
   margin: 0 auto;
-  padding: 0 clamp(12px, 4.27vw, 20px);
+  /* padding: 0 clamp(12px, 4.27vw, 20px); */
   padding: 0 16px;
 }
 

@@ -1,141 +1,359 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/STPP-395/favicon.svg" />
+    <link rel="icon" type="image/png" href="/STPP-395/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
-    <script type="module" crossorigin src="/STPP-395/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/STPP-395/assets/styles-BvvI0Brj.css">
+    <meta
+      name="description"
+      content="Hexa Diamonds — relaxing hexagon puzzles powered by magical diamonds."
+    />
+    <title>Hexa Diamonds</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Luckiest+Guy&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" crossorigin src="/STPP-395/assets/main-BFIUlG2y.js"></script>
+    <link rel="stylesheet" crossorigin href="/STPP-395/assets/main-CE0edMPb.css">
   </head>
   <body>
     <header class="header">
   <div class="container">
-    <div class="wrapper">
-      <nav class="nav">
-        <a class="nav-logo" href="./index.html" aria-label="Site logo">
-          <svg class="nav-logo-icon" width="100" height="30">
-            <use href="/STPP-395/assets/sprite-E8vg0sBb.svg#logo"></use>
-          </svg>
-          <svg class="nav-logo-icon" width="100" height="30">
-            <use href="/STPP-395/assets/sprite-E8vg0sBb.svg#logo"></use>
-          </svg>
-        </a>
-        <ul class="nav-list">
-          <li class="nav-item">
-            <a class="nav-link {=$highlight-act}" href="./page-2.html">Page 2</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link {=$highlight-curr}" href="./page-3.html">Page 3</a>
-          </li>
+    <div class="header__bar">
+      <a class="header__logo" href="./index.html" aria-label="Hexa Diamonds home">
+        <img
+          src="/STPP-395/assets/logo-YxUV2Hc-.png"
+          srcset="/STPP-395/assets/logo-YxUV2Hc-.png 1x, /STPP-395/assets/logo-YxUV2Hc-.png 2x"
+          alt="Hexa Diamonds"
+          width="56"
+          height="56"
+        />
+      </a>
+
+      <nav class="header__nav" aria-label="Primary">
+        <ul class="header__list">
+          <li><a class="header__link" href="./index.html#about">About the Game</a></li>
+          <li><a class="header__link" href="./index.html#how-to-play">How to Play</a></li>
+          <li><a class="header__link" href="./index.html#features">Features</a></li>
+          <li><a class="header__link" href="./index.html#reviews">Reviews</a></li>
+          <li><a class="header__link" href="./index.html#contact">Contact</a></li>
         </ul>
       </nav>
-      <div class="header__burger-wrapper">
-        <button type="button" class="burger-btn" data-action="open">Open menu</button>
-        <div class="burger-menu" data-visible="close">
-          <ul>
-            <li><a href="#">link-1</a></li>
-            <li><a href="#">link-2</a></li>
-            <li><a href="#">link-3</a></li>
-            <li><a href="#">link-4</a></li>
-          </ul>
-          <button type="button" class="btn-close" data-action="close">close</button>
-        </div>
+
+      <div class="header__cta">
+        <a
+  class="google-play google-play--sm"
+  href="https://play.google.com/store/games"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Get it on Google Play"
+>
+  <svg class="google-play__icon" width="24" height="26" aria-hidden="true">
+    <use href="./sprite.svg#icon-icon"></use>
+  </svg>
+  <span class="google-play__text">
+    <span class="google-play__caption">Get it on</span>
+    <span class="google-play__label">Google Play</span>
+  </span>
+</a>
+
       </div>
+
+      <button
+        class="burger-btn"
+        type="button"
+        data-action="open"
+        aria-label="Open menu"
+        aria-controls="mobile-menu"
+        aria-expanded="false"
+      >
+        <span class="burger-btn__icon" aria-hidden="true">
+          <span></span>
+          <span></span>
+        </span>
+      </button>
     </div>
   </div>
 </header>
 
-    <main>
-      <!-- Loads the specified .html file -->
-      <section class="vite-promo">
-  <div class="container">
-    <div class="vite-promo-thumb">
-      <a
-        class="vite-promo-link"
-        href="https://vitejs.dev/"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Link to Vite official website"
-        title="Vite.js  build tool"
-      >
-        <!-- Path to images as from index.html file -->
-        <img
-          class="pic"
-          src="/STPP-395/assets/vite-logo-9o_aqrTe.png"
-          alt="Vite logo"
-          width="640"
-          height="640"
+<div class="mobile-menu" id="mobile-menu" data-visible="close" hidden>
+  <div class="mobile-menu__bar">
+    <a class="header__logo" href="./index.html" aria-label="Hexa Diamonds home">
+      <img
+        src="/STPP-395/assets/logo-YxUV2Hc-.png"
+        srcset="/STPP-395/assets/logo-YxUV2Hc-.png 1x, /STPP-395/assets/logo-YxUV2Hc-.png 2x"
+        alt="Hexa Diamonds"
+        width="40"
+        height="40"
+      />
+    </a>
+    <button
+      class="mobile-menu__close"
+      type="button"
+      data-action="close"
+      aria-label="Close menu"
+    >
+      <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true">
+        <path
+          d="M3 3l12 12M15 3L3 15"
+          stroke="currentColor"
+          stroke-width="2.5"
+          stroke-linecap="round"
         />
-      </a>
+      </svg>
+    </button>
+  </div>
+  <div class="mobile-menu__body">
+    <div class="mobile-menu__logo">
+      <img
+        src="/STPP-395/assets/logo-YxUV2Hc-.png"
+        srcset="/STPP-395/assets/logo-YxUV2Hc-.png 1x, /STPP-395/assets/logo-YxUV2Hc-.png 2x"
+        alt=""
+        width="120"
+        height="120"
+      />
     </div>
-    <h1 class="main-title">
-      <span class="main-title-gradient">Vite</span>
-      Template by
-      <a
-        class="main-title-link"
-        href="https://github.com/goitacademy/vanilla-app-template"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        GoIT
-      </a>
-    </h1>
+    <nav class="mobile-menu__nav" aria-label="Mobile">
+      <a class="mobile-menu__link" href="./index.html#about">About the Game</a>
+      <a class="mobile-menu__link" href="./index.html#how-to-play">How to Play</a>
+      <a class="mobile-menu__link" href="./index.html#features">Features</a>
+      <a class="mobile-menu__link" href="./index.html#reviews">Reviews</a>
+      <a class="mobile-menu__link" href="./index.html#contact">Contact</a>
+    </nav>
+  </div>
+</div>
+
+
+    <main>
+      <section class="hero" id="hero">
+  <div class="hero__media">
+    <picture>
+      <source
+        media="(min-width: 1440px)"
+        srcset="/STPP-395/assets/hero-1x-9nZsiCHC.jpg 1x, /STPP-395/assets/hero-2x-BnQ4cUuj.jpg 2x"
+      />
+      <img
+        class="hero__bg"
+        src="/STPP-395/assets/hero-mobile-1x-CyLGPYaG.jpg"
+        srcset="/STPP-395/assets/hero-mobile-1x-CyLGPYaG.jpg 1x, /STPP-395/assets/hero-mobile-2x-CJYJ080r.jpg 2x"
+        alt=""
+        width="543"
+        height="360"
+      />
+    </picture>
+
+    <div class="container">
+      <div class="hero__content">
+        <p class="hero__eyebrow">Hexa Diamonds</p>
+        <h1 class="hero__title">
+          <span class="hero__title-line hero__title-line--purple">Think Sharp.</span>
+          <span class="hero__title-line hero__title-line--pink">Shine Bright.</span>
+        </h1>
+        <p class="hero__text">
+          Relaxing hexagon puzzles powered by magical diamonds. Every piece fits.
+          Every puzzle shines.
+        </p>
+        <a
+  class="google-play "
+  href="https://play.google.com/store/games"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Get it on Google Play"
+>
+  <svg class="google-play__icon" width="24" height="26" aria-hidden="true">
+    <use href="./sprite.svg#icon-icon"></use>
+  </svg>
+  <span class="google-play__text">
+    <span class="google-play__caption">Get it on</span>
+    <span class="google-play__label">Google Play</span>
+  </span>
+</a>
+
+      </div>
+    </div>
+
+    <img
+      class="hero__edge"
+      src="/STPP-395/assets/mountain-bgd-hero-B9Fwfmr0.png"
+      alt=""
+      width="1440"
+      height="332"
+    />
   </div>
 </section>
 
-      <article class="badges">
+      <section class="about" id="about">
   <div class="container">
-    <ul class="badges-list">
-      <li class="badges-item">
-        <a
-          class="badges-link"
-          href="https://www.npmjs.com/package/vite-plugin-html-inject"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          HTML Inject
-        </a>
-      </li>
-      <li class="badges-item">
-        <a
-          class="badges-link"
-          href="https://www.npmjs.com/package/vite-plugin-full-reload"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Full Reload
-        </a>
-      </li>
-      <li class="badges-item">
-        <a
-          class="badges-link"
-          href="https://www.npmjs.com/package/postcss-sort-media-queries"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Sort Media Queries
-        </a>
-      </li>
-    </ul>
+    <div class="about__inner">
+      <div class="about__media">
+        <div class="about__image">
+          <picture>
+            <source
+              media="(min-width: 1440px)"
+              srcset="/STPP-395/assets/about-1x-CgyW1LbM.jpg 1x, /STPP-395/assets/about-2x-KrUEjs5b.jpg 2x"
+            />
+            <img
+              src="/STPP-395/assets/about-mobile-1x-BM9OjmOt.jpg"
+              srcset="/STPP-395/assets/about-mobile-1x-BM9OjmOt.jpg 1x, /STPP-395/assets/about-mobile-2x-DZbTwsJ9.jpg 2x"
+              alt="Hexa Diamonds characters on a jungle path"
+              width="335"
+              height="189"
+            />
+          </picture>
+        </div>
+      </div>
+
+      <div class="about__content">
+        <picture>
+          <source
+            media="(min-width: 1440px)"
+            srcset="/STPP-395/assets/bird-right-bgd-D3J9sn0a.png"
+          />
+          <img
+            class="about__bird"
+            src="/STPP-395/assets/bird-right-bgd-mobile-CYRSnSwc.png"
+            alt=""
+            width="72"
+            height="63"
+          />
+        </picture>
+
+        <p class="section-label about__label">About the Game</p>
+        <h2 class="section-title about__title">
+          A puzzle built for calm, focused thinking
+        </h2>
+        <p class="about__text">
+          Hexa Diamonds challenges players to place diamonds, squares, and triangular
+          gems onto a hexagonal grid, rewarding careful spatial planning over speed.
+          Guided by a magical puzzle companion, players work through progressively
+          intricate layouts designed to sharpen logic while staying relaxing and
+          low-pressure. The atmosphere feels elegant, meditative, and visually
+          polished.
+        </p>
+
+        <img
+          class="about__bird-desktop"
+          src="/STPP-395/assets/bird-right-bgd-D3J9sn0a.png"
+          alt=""
+          width="180"
+          height="160"
+        />
+      </div>
+    </div>
   </div>
-</article>
+</section>
+
+      <section class="how-to-play" id="how-to-play">
+  <div class="container">
+    <div class="how-to-play__header">
+      <p class="section-label how-to-play__label">How to Play</p>
+      <h2 class="section-title how-to-play__title">
+        Simple placement, deep strategy
+      </h2>
+    </div>
+  </div>
+
+  <div class="how-to-play__stage">
+    <div class="how-to-play__slider" data-howto-slider>
+      <ul class="how-to-play__list" data-howto-track>
+        <li class="how-to-play__item how-to-play__item--study">
+          <h3 class="how-to-play__item-title">Study the Grid</h3>
+          <p class="how-to-play__item-text">
+            Examine the hexagonal board before placing pieces.
+          </p>
+        </li>
+
+        <li class="how-to-play__item how-to-play__item--place">
+          <h3 class="how-to-play__item-title">Place Gem Shapes</h3>
+          <p class="how-to-play__item-text">
+            Fit diamonds, squares, and triangles into open spaces.
+          </p>
+        </li>
+
+        <li class="how-to-play__item how-to-play__item--clear">
+          <h3 class="how-to-play__item-title">Clear Full Rows</h3>
+          <p class="how-to-play__item-text">
+            Complete lines to clear space and score points.
+          </p>
+        </li>
+
+        <li class="how-to-play__item how-to-play__item--plan">
+          <h3 class="how-to-play__item-title">Plan Ahead</h3>
+          <p class="how-to-play__item-text">
+            Anticipate upcoming shapes to avoid dead ends.
+          </p>
+        </li>
+
+        <li class="how-to-play__item how-to-play__item--progress">
+          <h3 class="how-to-play__item-title">Progress Through Puzzles</h3>
+          <p class="how-to-play__item-text">
+            Advance through increasingly complex hexagon layouts.
+          </p>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="how-to-play__controls">
+      <button
+        class="how-to-play__btn"
+        type="button"
+        data-howto-prev
+        aria-label="Previous step"
+      >
+        <svg class="icon icon--arrow" width="28" height="28" aria-hidden="true">
+          <use href="./sprite.svg#icon-i-1"></use>
+        </svg>
+      </button>
+      <button
+        class="how-to-play__btn"
+        type="button"
+        data-howto-next
+        aria-label="Next step"
+      >
+        <svg class="icon icon--arrow" width="28" height="28" aria-hidden="true">
+          <use href="./sprite.svg#icon-state-default"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+</section>
 
     </main>
 
     <footer class="footer">
   <div class="container">
-    <p class="footer-desc">
-      Made with ✨ by
+    <div class="footer__inner">
       <a
-        class="footer-link"
-        href="https://goit.global/ua/"
-        target="_blank"
-        rel="noopener noreferrer"
+        class="footer__logo"
+        href="./index.html"
+        aria-label="Hexa Diamonds home"
       >
-        GoIT team
+        <img
+          src="/STPP-395/assets/logo-YxUV2Hc-.png"
+          srcset="/STPP-395/assets/logo-YxUV2Hc-.png 1x, /STPP-395/assets/logo-YxUV2Hc-.png 2x"
+          alt="Hexa Diamonds"
+          width="56"
+          height="56"
+        />
       </a>
-    </p>
+
+      <ul class="footer__links">
+        <li>
+          <a class="footer__link" href="./privacy-policy.html"
+            >Privacy Policy</a
+          >
+        </li>
+        <li>
+          <a class="footer__link" href="./terms.html">Terms of Service</a>
+        </li>
+      </ul>
+
+      <p class="footer__copy">© 2026 novaparcel.space — All rights reserved.</p>
+    </div>
   </div>
 </footer>
 

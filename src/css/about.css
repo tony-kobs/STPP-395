@@ -1,0 +1,119 @@
+.about {
+  position: relative;
+  padding: 40px 0 48px;
+  overflow: hidden;
+}
+
+.about__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.about__content {
+  position: relative;
+  order: -1;
+  text-align: center;
+}
+
+.about__label {
+  margin-bottom: 12px;
+}
+
+.about__bird {
+  position: absolute;
+  top: -8px;
+  right: 0;
+  width: 72px;
+  height: auto;
+  pointer-events: none;
+}
+
+.about__title {
+  margin-bottom: 16px;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about__text {
+  font-family: var(--font-family);
+  font-size: 14px;
+  line-height: 1.55;
+  font-weight: 500;
+  color: var(--neutral-charade);
+  text-align: left;
+}
+
+.about__image {
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.about__image img {
+  width: 100%;
+  height: auto;
+}
+
+.about__bird-desktop {
+  display: none;
+}
+
+@media only screen and (min-width: 1440px) {
+  .about {
+    padding: 60px 0 80px;
+  }
+
+  .about__inner {
+    flex-direction: row;
+    align-items: center;
+    gap: 48px;
+  }
+
+  .about__media {
+    flex: 0 0 628px;
+  }
+
+  .about__content {
+    position: relative;
+    order: 0;
+    flex: 1;
+    text-align: left;
+    padding-right: 80px;
+  }
+
+  .about__bird {
+    display: none;
+  }
+
+  .about__bird-desktop {
+    display: block;
+    position: absolute;
+    top: 40px;
+    right: -20px;
+    width: 180px;
+    height: auto;
+    pointer-events: none;
+  }
+
+  .about__label {
+    text-align: left;
+    margin-bottom: 16px;
+  }
+
+  .about__title {
+    text-align: left;
+    max-width: 480px;
+    margin: 0 0 24px;
+    font-size: 40px;
+  }
+
+  .about__text {
+    font-size: 16px;
+    max-width: 460px;
+  }
+
+  .about__image {
+    border-radius: 32px;
+  }
+}

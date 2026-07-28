@@ -1,36 +1,90 @@
 <header class="header">
   <div class="container">
-    <div class="wrapper">
-      <nav class="nav">
-        <a class="nav-logo" href="./index.html" aria-label="Site logo">
-          <svg class="nav-logo-icon" width="100" height="30">
-            <use href="{=$icon-path}"></use>
-          </svg>
-          <svg class="nav-logo-icon" width="100" height="30">
-            <use href="{=$icon-path2}"></use>
-          </svg>
-        </a>
-        <ul class="nav-list">
-          <li class="nav-item">
-            <a class="nav-link {=$highlight-act}" href="./page-2.html">Page 2</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link {=$highlight-curr}" href="./page-3.html">Page 3</a>
-          </li>
+    <div class="header__bar">
+      <a class="header__logo" href="./index.html" aria-label="Hexa Diamonds home">
+        <img
+          src="./img/logo.png"
+          srcset="./img/logo.png 1x, ./img/logo@2x.png 2x"
+          alt="Hexa Diamonds"
+          width="56"
+          height="56"
+        />
+      </a>
+
+      <nav class="header__nav" aria-label="Primary">
+        <ul class="header__list">
+          <li><a class="header__link" href="{=$home}#about">About the Game</a></li>
+          <li><a class="header__link" href="{=$home}#how-to-play">How to Play</a></li>
+          <li><a class="header__link" href="{=$home}#features">Features</a></li>
+          <li><a class="header__link" href="{=$home}#reviews">Reviews</a></li>
+          <li><a class="header__link" href="{=$home}#contact">Contact</a></li>
         </ul>
       </nav>
-      <div class="header__burger-wrapper">
-        <button type="button" class="burger-btn" data-action="open">Open menu</button>
-        <div class="burger-menu" data-visible="close">
-          <ul>
-            <li><a href="#">link-1</a></li>
-            <li><a href="#">link-2</a></li>
-            <li><a href="#">link-3</a></li>
-            <li><a href="#">link-4</a></li>
-          </ul>
-          <button type="button" class="btn-close" data-action="close">close</button>
-        </div>
+
+      <div class="header__cta">
+        <load src="partials/google-play.html" class="google-play--sm" />
       </div>
+
+      <button
+        class="burger-btn"
+        type="button"
+        data-action="open"
+        aria-label="Open menu"
+        aria-controls="mobile-menu"
+        aria-expanded="false"
+      >
+        <span class="burger-btn__icon" aria-hidden="true">
+          <span></span>
+          <span></span>
+        </span>
+      </button>
     </div>
   </div>
 </header>
+
+<div class="mobile-menu" id="mobile-menu" data-visible="close" hidden>
+  <div class="mobile-menu__bar">
+    <a class="header__logo" href="./index.html" aria-label="Hexa Diamonds home">
+      <img
+        src="./img/logo.png"
+        srcset="./img/logo.png 1x, ./img/logo@2x.png 2x"
+        alt="Hexa Diamonds"
+        width="40"
+        height="40"
+      />
+    </a>
+    <button
+      class="mobile-menu__close"
+      type="button"
+      data-action="close"
+      aria-label="Close menu"
+    >
+      <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true">
+        <path
+          d="M3 3l12 12M15 3L3 15"
+          stroke="currentColor"
+          stroke-width="2.5"
+          stroke-linecap="round"
+        />
+      </svg>
+    </button>
+  </div>
+  <div class="mobile-menu__body">
+    <div class="mobile-menu__logo">
+      <img
+        src="./img/logo.png"
+        srcset="./img/logo.png 1x, ./img/logo@2x.png 2x"
+        alt=""
+        width="120"
+        height="120"
+      />
+    </div>
+    <nav class="mobile-menu__nav" aria-label="Mobile">
+      <a class="mobile-menu__link" href="{=$home}#about">About the Game</a>
+      <a class="mobile-menu__link" href="{=$home}#how-to-play">How to Play</a>
+      <a class="mobile-menu__link" href="{=$home}#features">Features</a>
+      <a class="mobile-menu__link" href="{=$home}#reviews">Reviews</a>
+      <a class="mobile-menu__link" href="{=$home}#contact">Contact</a>
+    </nav>
+  </div>
+</div>

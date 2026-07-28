@@ -61,13 +61,6 @@
   mask-mode: luminance;
 }
 
-.how-to-play__slider {
-  position: relative;
-  z-index: 2;
-  overflow: hidden;
-  padding: 56px 0 40px;
-}
-
 .how-to-play__list {
   display: flex;
   align-items: center;

@@ -1,9 +1,9 @@
 .google-play {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  padding: 16px 24px;
-  border-radius: 8px;
+  gap: 16px;
+  padding: 13px 16px;
+  border-radius: 10px;
   background-color: var(--neutral-black);
   color: var(--neutral-white);
   text-decoration: none;
@@ -19,6 +19,8 @@
 }
 
 .google-play__icon {
+  width: 32px;
+  height: 35px;
   flex-shrink: 0;
 }
 
@@ -60,4 +62,10 @@
 
 .google-play--sm .google-play__label {
   font-size: 13px;
+}
+
+@media only screen and (min-width: 1440px) {
+  .google-play {
+    padding: 16px 24px;
+  }
 }

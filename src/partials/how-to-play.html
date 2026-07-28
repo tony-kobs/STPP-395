@@ -6,71 +6,66 @@
         Simple placement, deep strategy
       </h2>
     </div>
-  </div>
+    <div class="how-to-play__media">
+      <picture>
+        <source
+          media="(min-width: 1440px)"
+          srcset="
+            ./img/howto/how-to-play-1x.jpg 1x,
+            ./img/howto/how-to-play-2x.jpg 2x
+          "
+        />
+        <img
+          class="how-to-play__bg"
+          src="./img/howto/how-to-play-mobile-1x.jpg"
+          srcset="
+            ./img/howto/how-to-play-mobile-1x.jpg 1x,
+            ./img/howto/how-to-play-mobile-2x.jpg 2x
+          "
+          alt=""
+          width="543"
+          height="360"
+        />
+      </picture>
 
-  <div class="how-to-play__stage">
-    <div class="how-to-play__slider" data-howto-slider>
-      <ul class="how-to-play__list" data-howto-track>
-        <li class="how-to-play__item how-to-play__item--study">
-          <h3 class="how-to-play__item-title">Study the Grid</h3>
-          <p class="how-to-play__item-text">
-            Examine the hexagonal board before placing pieces.
-          </p>
-        </li>
+      <div class="how-to-play__slider" data-howto-slider>
+        <ul class="how-to-play__list" data-howto-track>
+          <li class="how-to-play__item how-to-play__item--study">
+            <h3 class="how-to-play__item-title">Study the Grid</h3>
+            <p class="how-to-play__item-text">
+              Examine the hexagonal board before placing pieces.
+            </p>
+          </li>
 
-        <li class="how-to-play__item how-to-play__item--place">
-          <h3 class="how-to-play__item-title">Place Gem Shapes</h3>
-          <p class="how-to-play__item-text">
-            Fit diamonds, squares, and triangles into open spaces.
-          </p>
-        </li>
+          <li class="how-to-play__item how-to-play__item--place">
+            <h3 class="how-to-play__item-title">Place Gem Shapes</h3>
+            <p class="how-to-play__item-text">
+              Fit diamonds, squares, and triangles into open spaces.
+            </p>
+          </li>
 
-        <li class="how-to-play__item how-to-play__item--clear">
-          <h3 class="how-to-play__item-title">Clear Full Rows</h3>
-          <p class="how-to-play__item-text">
-            Complete lines to clear space and score points.
-          </p>
-        </li>
+          <li class="how-to-play__item how-to-play__item--clear">
+            <h3 class="how-to-play__item-title">Clear Full Rows</h3>
+            <p class="how-to-play__item-text">
+              Complete lines to clear space and score points.
+            </p>
+          </li>
 
-        <li class="how-to-play__item how-to-play__item--plan">
-          <h3 class="how-to-play__item-title">Plan Ahead</h3>
-          <p class="how-to-play__item-text">
-            Anticipate upcoming shapes to avoid dead ends.
-          </p>
-        </li>
+          <li class="how-to-play__item how-to-play__item--plan">
+            <h3 class="how-to-play__item-title">Plan Ahead</h3>
+            <p class="how-to-play__item-text">
+              Anticipate upcoming shapes to avoid dead ends.
+            </p>
+          </li>
 
-        <li class="how-to-play__item how-to-play__item--progress">
-          <h3 class="how-to-play__item-title">Progress Through Puzzles</h3>
-          <p class="how-to-play__item-text">
-            Advance through increasingly complex hexagon layouts.
-          </p>
-        </li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="container">
-    <div class="how-to-play__controls">
-      <button
-        class="how-to-play__btn"
-        type="button"
-        data-howto-prev
-        aria-label="Previous step"
-      >
-        <svg class="icon icon--arrow" width="28" height="28" aria-hidden="true">
-          <use href="./sprite.svg#icon-i-1"></use>
-        </svg>
-      </button>
-      <button
-        class="how-to-play__btn"
-        type="button"
-        data-howto-next
-        aria-label="Next step"
-      >
-        <svg class="icon icon--arrow" width="28" height="28" aria-hidden="true">
-          <use href="./sprite.svg#icon-state-default"></use>
-        </svg>
-      </button>
+          <li class="how-to-play__item how-to-play__item--progress">
+            <h3 class="how-to-play__item-title">Progress Through Puzzles</h3>
+            <p class="how-to-play__item-text">
+              Advance through increasingly complex hexagon layouts.
+            </p>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>

@@ -17,6 +17,9 @@ export default defineConfig(({ command }) => {
         input: glob.sync('./src/*.html'),
         output: {
           manualChunks(id) {
+            if (id.includes('node_modules/gsap')) {
+              return 'gsap';
+            }
             if (id.includes('node_modules')) {
               return 'vendor';
             }

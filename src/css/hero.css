@@ -142,18 +142,18 @@
   filter: drop-shadow(5px 5px 42px #ffffff);
 }
 
-/* Initial state before GSAP — avoids flash of final layout */
-.hero:not([data-hero-ready]) .hero__bg {
+/* Hide reveal targets only when JS is available — avoids blank hero if modules fail */
+html.js .hero:not([data-hero-ready]) .hero__bg {
   transform: scale(1.08);
   transform-origin: center top;
 }
 
-.hero:not([data-hero-ready]) .hero__eyebrow,
-.hero:not([data-hero-ready]) .hero__title-line,
-.hero:not([data-hero-ready]) .hero__text,
-.hero:not([data-hero-ready]) [data-hero-anim='cta'],
-.hero:not([data-hero-ready]) .hero__cat,
-.hero:not([data-hero-ready]) .hero__edge-img {
+html.js .hero:not([data-hero-ready]) .hero__eyebrow,
+html.js .hero:not([data-hero-ready]) .hero__title-line,
+html.js .hero:not([data-hero-ready]) .hero__text,
+html.js .hero:not([data-hero-ready]) [data-hero-anim='cta'],
+html.js .hero:not([data-hero-ready]) .hero__cat,
+html.js .hero:not([data-hero-ready]) .hero__edge-img {
   opacity: 0;
 }
 

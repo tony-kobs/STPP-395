@@ -1,6 +1,7 @@
 .contact {
   position: relative;
-  padding: 64px 0 80px;
+  padding: 72px 0 80px;
+  border-radius: 24px;
   background-color: var(--yellow-golden-fizz);
   overflow: hidden;
 }
@@ -15,23 +16,26 @@
 }
 
 .contact__label {
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
 
 .contact__title {
-  max-width: 300px;
-  margin: 0 auto 28px;
+  max-width: 207px;
+  margin-bottom: 16px;
 }
 
 .contact__cta {
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .contact__email {
-  font-family: var(--font-family);
-  font-size: 14px;
+  font-family: var(--font3);
   font-weight: 600;
-  line-height: 1.4;
+  font-size: 14px;
+  line-height: 1.3;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  text-align: center;
   color: var(--neutral-black);
   transition: opacity 0.2s ease;
 }
@@ -50,57 +54,61 @@
 }
 
 .contact__gems-left {
-  left: -8px;
-  bottom: 40px;
+  left: 0px;
+  top: 50px;
   width: 66px;
 }
 
 .contact__gems-right {
-  right: -12px;
-  bottom: 80px;
-  width: 105px;
+  right: 0px;
+  top: 0px;
+  width: 86px;
 }
 
 .contact__bird {
-  left: 20px;
+  right: 20px;
   bottom: 20px;
-  width: 64px;
+  width: 73px;
 }
 
 @media only screen and (min-width: 1440px) {
   .contact {
-    padding: 100px 0 120px;
+    padding: 80px 0px;
+  }
+
+  .contact__label {
+    margin-bottom: 32px;
   }
 
   .contact__title {
-    max-width: 700px;
-    margin-bottom: 36px;
-    font-size: 40px;
+    max-width: 396px;
+    margin-bottom: 48px;
+    font-size: 32px;
   }
 
   .contact__cta {
-    margin-bottom: 24px;
+    margin-bottom: 48px;
   }
 
   .contact__email {
-    font-size: 18px;
+    font-size: 24px;
   }
 
   .contact__gems-left {
-    left: 40px;
+    left: 0px;
     bottom: 60px;
     width: 180px;
   }
 
   .contact__gems-right {
-    right: 40px;
-    bottom: 40px;
-    width: 280px;
+    right: 0px;
+    top: 0px;
+    width: 240px;
   }
 
   .contact__bird {
-    left: 260px;
+    right: 260px;
     bottom: 80px;
-    width: 140px;
+    width: 190px;
   }
 }

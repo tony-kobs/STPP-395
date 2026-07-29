@@ -1,15 +1,16 @@
-/* Styles for Mobile devices */
+/* Mobile: fluid 320→375, hard cap at 375px */
 .container {
+  box-sizing: border-box;
   width: 100%;
-  min-width: 320px;
-  max-width: 375px;
+  max-width: var(--layout-mobile);
   margin: 0 auto;
-  padding: 0 clamp(12px, 4.27vw, 20px);
+  padding: 0 clamp(12px, 5.33vw, 20px);
 }
 
-/* Styles for Desktop devices */
+/* Desktop: hard 1440px */
 @media only screen and (min-width: 1440px) {
   .container {
-    max-width: 1440px;
+    max-width: var(--layout-desktop);
+    padding: 0;
   }
 }

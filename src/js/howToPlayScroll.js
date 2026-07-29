@@ -1,15 +1,41 @@
 const list = document.querySelector('[data-howto-list]');
+const dots = document.querySelectorAll('[data-howto-dot]');
 const desktopQuery = window.matchMedia('(min-width: 1440px)');
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+const FRAME_COUNT = 3;
 
 if (list) {
   let target = list.scrollLeft;
   let current = list.scrollLeft;
   let rafId = 0;
+  let activeFrame = 0;
 
-  const clamp = (value) => {
+  const clamp = value => {
     const max = Math.max(0, list.scrollWidth - list.clientWidth);
     return Math.min(Math.max(value, 0), max);
+  };
+
+  const getFrameIndex = () => {
+    const max = Math.max(0, list.scrollWidth - list.clientWidth);
+    if (max <= 0) return 0;
+
+    const progress = list.scrollLeft / max;
+    return Math.min(
+      FRAME_COUNT - 1,
+      Math.max(0, Math.round(progress * (FRAME_COUNT - 1)))
+    );
+  };
+
+  const updateDots = () => {
+    if (!dots.length || desktopQuery.matches) return;
+
+    activeFrame = getFrameIndex();
+
+    dots.forEach((dot, index) => {
+      const dist = Math.abs(index - activeFrame);
+      dot.dataset.dist = String(dist);
+      dot.classList.toggle('is-active', dist === 0);
+    });
   };
 
   const tick = () => {
@@ -20,10 +46,12 @@ if (list) {
       current = target;
       list.scrollLeft = current;
       rafId = 0;
+      updateDots();
       return;
     }
 
     list.scrollLeft = current;
+    updateDots();
     rafId = requestAnimationFrame(tick);
   };
 
@@ -33,7 +61,7 @@ if (list) {
 
   list.addEventListener(
     'wheel',
-    (event) => {
+    event => {
       if (desktopQuery.matches) return;
 
       const canScroll = list.scrollWidth > list.clientWidth;
@@ -61,10 +89,16 @@ if (list) {
   list.addEventListener(
     'scroll',
     () => {
-      if (rafId) return;
-      target = list.scrollLeft;
-      current = list.scrollLeft;
+      if (!rafId) {
+        target = list.scrollLeft;
+        current = list.scrollLeft;
+      }
+      updateDots();
     },
     { passive: true }
   );
+
+  desktopQuery.addEventListener('change', updateDots);
+  window.addEventListener('resize', updateDots);
+  updateDots();
 }

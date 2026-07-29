@@ -1,4 +1,4 @@
-<section class="hero" id="hero">
+<section class="hero" id="hero" data-hero>
   <div class="container">
     <div class="hero__media">
       <picture>
@@ -8,6 +8,7 @@
         />
         <img
           class="hero__bg"
+          data-hero-anim="bg"
           src="./img/hero-mobile-1x.jpg"
           srcset="./img/hero-mobile-1x.jpg 1x, ./img/hero-mobile-2x.jpg 2x"
           alt=""
@@ -19,31 +20,65 @@
       </picture>
 
       <div class="hero__content">
-        <p class="hero__eyebrow">Hexa Diamonds</p>
+        <p class="hero__eyebrow" data-hero-anim="eyebrow">Hexa Diamonds</p>
         <h1 class="hero__title">
-          <span class="hero__title-line hero__title-line--purple"
+          <span
+            class="hero__title-line hero__title-line--purple"
+            data-hero-anim="title-purple"
             >Think Sharp.</span
           >
-          <span class="hero__title-line hero__title-line--pink"
+          <span
+            class="hero__title-line hero__title-line--pink"
+            data-hero-anim="title-pink"
             >Shine Bright.</span
           >
         </h1>
-        <p class="hero__text">
+        <p class="hero__text" data-hero-anim="text">
           Relaxing hexagon puzzles powered by magical diamonds. Every piece
           fits. Every puzzle shines.
         </p>
-        <load src="partials/google-play.html" class="" />
+        <span data-hero-anim="cta">
+          <load src="partials/google-play.html" class="" />
+        </span>
       </div>
     </div>
 
-    <img
-      class="hero__edge"
-      src="./img/decor/mountain-bgd-hero.png"
-      alt=""
-      width="1440"
-      height="332"
-      loading="lazy"
-      decoding="async"
-    />
+    <div class="hero__cat" data-hero-anim="cat">
+      <picture>
+        <source
+          media="(min-width: 1440px)"
+          srcset="./img/decor/hero-cat.png"
+        />
+        <img
+          class="hero__cat-img"
+          data-hero-anim="cat-img"
+          src="./img/decor/hero-cat-mobile.png"
+          alt=""
+          width="163"
+          height="181"
+          loading="eager"
+          decoding="async"
+        />
+      </picture>
+    </div>
+
+    <div class="hero__edge">
+      <picture>
+        <source
+          media="(min-width: 1440px)"
+          srcset="./img/decor/mountain-bgd-hero-shine-desktop.png"
+        />
+        <img
+          class="hero__edge-img"
+          data-hero-anim="edge"
+          src="./img/decor/mountain-bgd-hero-shine-mobile.png"
+          alt=""
+          width="459"
+          height="170"
+          loading="eager"
+          decoding="async"
+        />
+      </picture>
+    </div>
   </div>
 </section>

@@ -89,10 +89,17 @@
   color: var(--neutral-white);
 }
 
-.features__card--image img {
+.features__card--image img,
+.features__card--image video {
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.features__item--cat .features__video {
+  aspect-ratio: 158 / 203;
+  height: auto;
 }
 
 .features__bird {
@@ -142,6 +149,10 @@
   }
   .features__item--cat {
     order: 7;
+  }
+
+  .features__item--cat .features__video {
+    aspect-ratio: 302 / 390;
   }
   .features__item--calming {
     order: 6;

@@ -31,6 +31,8 @@
   position: relative;
   z-index: 1;
   overflow: hidden;
+  padding: 10px 6px;
+  margin: -10px -6px;
 }
 
 .reviews__track {
@@ -40,16 +42,36 @@
 }
 
 .reviews__card {
+  --reviews-card-ink: var(--neutral-charade);
+  --reviews-card-bg: url('../img/decor/reviews-card-1-mobile.png');
+  box-sizing: border-box;
   flex: 0 0 min(83%, 335px);
   display: flex;
   flex-direction: row;
   align-items: start;
+  aspect-ratio: 298 / 165;
   max-height: none;
   gap: clamp(8px, 3.2vw, 12px);
-  border-radius: clamp(16px, 6.4vw, 24px);
+  border: none;
+  border-radius: 0;
   padding: clamp(20px, 6.4vw, 32px) clamp(16px, 6.4vw, 24px);
-  background-color: var(--neutral-white);
+  background-color: transparent;
+  background-image: var(--reviews-card-bg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  color: var(--reviews-card-ink);
   overflow: visible;
+}
+
+.reviews__card:nth-child(3n + 2) {
+  --reviews-card-ink: var(--neutral-white);
+  --reviews-card-bg: url('../img/decor/reviews-card-2-mobile.png');
+}
+
+.reviews__card:nth-child(3n) {
+  --reviews-card-ink: var(--neutral-white);
+  --reviews-card-bg: url('../img/decor/reviews-card-3-mobile.png');
 }
 
 .reviews__author {
@@ -63,7 +85,7 @@
   font-weight: 700;
   font-size: 16px;
   line-height: 1.3;
-  color: var(--neutral-charade);
+  color: var(--reviews-card-ink);
   margin-bottom: 8px;
 }
 
@@ -83,7 +105,7 @@
   font-size: 14px;
   line-height: 1.3;
   font-weight: 500;
-  color: var(--neutral-charade);
+  color: var(--reviews-card-ink);
 }
 
 .reviews__controls {
@@ -176,10 +198,20 @@
 
   .reviews__card {
     flex: 0 0 calc((100% - 48px) / 3);
-    border-radius: 24px;
+    aspect-ratio: 398 / 220;
     padding: 32px;
     max-width: 398px;
-    max-height: 185px;
+    max-height: none;
+    height: 220px;
+    --reviews-card-bg: url('../img/decor/reviews-card-1.png');
+  }
+
+  .reviews__card:nth-child(3n + 2) {
+    --reviews-card-bg: url('../img/decor/reviews-card-2.png');
+  }
+
+  .reviews__card:nth-child(3n) {
+    --reviews-card-bg: url('../img/decor/reviews-card-3.png');
   }
 
   .reviews__name {

@@ -162,9 +162,51 @@
   top: var(--hex-h);
 }
 
+.how-to-play__dots {
+  position: absolute;
+  left: 50%;
+  bottom: 28px;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.how-to-play__dot {
+  display: block;
+  flex-shrink: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--purple-perfume);
+  transition:
+    width 0.25s ease,
+    height 0.25s ease,
+    background-color 0.25s ease;
+}
+
+.how-to-play__dot[data-dist='1'] {
+  width: 8px;
+  height: 8px;
+}
+
+.how-to-play__dot[data-dist='0'],
+.how-to-play__dot.is-active {
+  width: 12px;
+  height: 12px;
+  background-color: var(--accent-razzle-dazzle-rose);
+}
+
 @media only screen and (min-width: 1440px) {
   .how-to-play {
     padding-top: 0;
+  }
+
+  .how-to-play__dots {
+    display: none;
   }
 
   .how-to-play__header {

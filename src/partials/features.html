@@ -102,27 +102,19 @@
       <div
         class="features__card features__card--image features__card--tall features__item--cat"
       >
-        <picture>
-          <source
-            media="(min-width: 1440px)"
-            srcset="
-              ./img/features/features-1-1x.jpg 1x,
-              ./img/features/features-1-2x.jpg 2x
-            "
-          />
-          <img
-            src="./img/features/features-mobile-1-1x.jpg"
-            srcset="
-              ./img/features/features-mobile-1-1x.jpg 1x,
-              ./img/features/features-mobile-1-2x.jpg 2x
-            "
-            alt="Magical cat companion in the jungle"
-            width="158"
-            height="203"
-            loading="lazy"
-            decoding="async"
-          />
-        </picture>
+        <video
+          class="features__video"
+          src="./img/features/hexa.mp4"
+          poster="./img/features/features-mobile-1-1x.jpg"
+          width="158"
+          height="203"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="metadata"
+          aria-label="Magical cat companion in the jungle"
+        ></video>
       </div>
 
       <div

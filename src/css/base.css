@@ -4,8 +4,6 @@
   --third-family: 'Luckiest Guy', sans-serif;
   --font3: 'Montserrat', sans-serif;
   --font4: 'Nerko One', sans-serif;
-  --font5: 'SF Pro', sans-serif;
-  --font6: 'Product Sans', sans-serif;
 
   --yellow-golden-fizz: #f7ef3a;
   --yellow-yellow: #fbbc04;
@@ -44,6 +42,8 @@
 
   --header-height-mobile: 64px;
   --header-height-desktop: 80px;
+  --layout-mobile: 375px;
+  --layout-desktop: 1440px;
 }
 
 html {
@@ -71,6 +71,7 @@ body {
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
   overscroll-behavior-y: none;
+  overflow-x: clip;
 }
 
 * {
@@ -111,6 +112,20 @@ main {
   flex-grow: 1;
 }
 
+.header,
+.hero,
+.about,
+.how-to-play,
+.features,
+.reviews,
+.contact,
+.footer,
+.legal {
+  width: 100%;
+  max-width: var(--layout-desktop);
+  margin-inline: auto;
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -131,6 +146,7 @@ img {
 }
 
 .section-label {
+  margin-bottom: 16px;
   font-family: var(--font4);
   font-weight: 400;
   font-size: 20px;
@@ -154,6 +170,7 @@ img {
   }
 
   .section-label {
+    margin-bottom: 32px;
     font-size: 32px;
   }
 

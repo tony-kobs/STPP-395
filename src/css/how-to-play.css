@@ -1,7 +1,7 @@
 .how-to-play {
   position: relative;
   overflow: hidden;
-  padding-top: 24px;
+  padding-top: 0;
 }
 
 .how-to-play .container {
@@ -16,11 +16,7 @@
   align-items: center;
   text-align: center;
   margin: 0 auto -40px;
-  padding: 0 12px;
-}
-
-.how-to-play__label {
-  margin-bottom: 8px;
+  padding: 0 clamp(8px, 3.2vw, 12px);
 }
 
 .how-to-play__title {
@@ -168,7 +164,7 @@
 
 @media only screen and (min-width: 1440px) {
   .how-to-play {
-    padding-top: 119px;
+    padding-top: 0;
   }
 
   .how-to-play__header {

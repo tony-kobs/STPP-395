@@ -6,7 +6,8 @@ const nextBtn = document.querySelector('[data-reviews-next]');
 if (slider && track && prevBtn && nextBtn) {
   let index = 0;
 
-  const getPerView = () => (window.matchMedia('(min-width: 1440px)').matches ? 3 : 1);
+  const getPerView = () =>
+    window.matchMedia('(min-width: 1440px)').matches ? 3 : 1;
 
   const getGap = () => {
     const styles = window.getComputedStyle(track);
@@ -27,6 +28,7 @@ if (slider && track && prevBtn && nextBtn) {
 
     const cardWidth = card.getBoundingClientRect().width;
     const offset = index * (cardWidth + getGap());
+
     track.style.transform = `translateX(-${offset}px)`;
 
     prevBtn.disabled = index <= 0;
@@ -43,6 +45,46 @@ if (slider && track && prevBtn && nextBtn) {
     update();
   });
 
+  // ==========================
+  // Swipe support
+  // ==========================
+  let startX = 0;
+  let currentX = 0;
+
+  slider.addEventListener(
+    'touchstart',
+    e => {
+      startX = e.touches[0].clientX;
+    },
+    { passive: true }
+  );
+
+  slider.addEventListener(
+    'touchmove',
+    e => {
+      currentX = e.touches[0].clientX;
+    },
+    { passive: true }
+  );
+
+  slider.addEventListener('touchend', () => {
+    const diff = startX - currentX;
+    const threshold = 50;
+
+    if (Math.abs(diff) < threshold) return;
+
+    if (diff > 0) {
+      // свайп вліво
+      index = Math.min(getMaxIndex(), index + 1);
+    } else {
+      // свайп вправо
+      index = Math.max(0, index - 1);
+    }
+
+    update();
+  });
+
   window.addEventListener('resize', update);
+
   update();
 }

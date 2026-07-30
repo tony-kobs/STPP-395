@@ -74,6 +74,10 @@ body {
   overflow-x: clip;
 }
 
+body[data-menu-open='true'] {
+  overflow: hidden;
+}
+
 * {
   scrollbar-width: thin;
   scrollbar-color: color-mix(

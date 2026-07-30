@@ -128,7 +128,7 @@
   overflow-y: auto;
 }
 
-.mobile-menu.is-open {
+.mobile-menu[data-visible='open'] {
   transform: translateX(0);
 }
 
@@ -197,7 +197,7 @@
   color: var(--neutral-charade);
 }
 
-body.menu-open {
+body[data-menu-open='true'] {
   overflow: hidden;
 }
 

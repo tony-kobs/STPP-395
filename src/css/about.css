@@ -49,6 +49,8 @@
 .about__image {
   border-radius: 24px;
   overflow: hidden;
+
+  filter: drop-shadow(5px 5px 5px #04bf8a);
 }
 
 .about__image img {

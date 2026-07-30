@@ -26,7 +26,7 @@
 
 .how-to-play__media {
   position: relative;
-  min-height: 560px;
+  min-height: 592px;
   overflow: hidden;
   border-radius: 0 0 48px 48px;
 }
@@ -180,8 +180,8 @@
 .how-to-play__dot {
   display: block;
   flex-shrink: 0;
-  width: 6px;
-  height: 6px;
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
   background-color: var(--purple-perfume);
   transition:
@@ -191,14 +191,14 @@
 }
 
 .how-to-play__dot[data-dist='1'] {
-  width: 8px;
-  height: 8px;
+  width: 18px;
+  height: 18px;
 }
 
 .how-to-play__dot[data-dist='0'],
 .how-to-play__dot.is-active {
-  width: 12px;
-  height: 12px;
+  width: 22px;
+  height: 22px;
   background-color: var(--accent-razzle-dazzle-rose);
 }
 

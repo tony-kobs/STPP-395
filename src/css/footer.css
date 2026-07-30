@@ -3,7 +3,9 @@
   border-radius: 24px 24px 0 0;
   padding: 20px 0px;
 }
-
+.footer .container {
+  padding: 0px 20px;
+}
 .footer__inner {
   display: flex;
   flex-direction: column;
@@ -58,7 +60,11 @@
 @media only screen and (min-width: 1440px) {
   .footer {
     border-radius: 40px 40px 0 0;
-    padding: 32px 60px;
+    padding: 44px 0px;
+  }
+
+  .footer .container {
+    padding: 0px 80px;
   }
 
   .footer__inner {

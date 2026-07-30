@@ -1,9 +1,9 @@
-.legal-page {
-  min-height: 100dvh;
-}
+/* .legal-page {
+  min-height: auto;
+} */
 
 .legal {
-  padding: clamp(48px, 16vw, 80px) 0;
+  padding: 48px 0px 80px 0px;
 }
 
 .legal__title {
@@ -42,7 +42,7 @@
 
 @media only screen and (min-width: 1440px) {
   .legal {
-    padding: 110px 0;
+    padding: 92px 0px 130px 0px;
   }
 
   .legal .container {

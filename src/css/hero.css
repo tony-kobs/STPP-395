@@ -1,6 +1,6 @@
 .hero {
   position: relative;
-  border: none;
+  border-radius: 24px 24px 0px 0px;
   overflow-x: clip;
   overflow-y: visible;
 }
@@ -19,6 +19,8 @@
   padding: clamp(24px, 10.67vw, 40px) clamp(12px, 5.33vw, 20px) 0;
   display: flex;
   justify-content: center;
+
+  border-radius: 24px 24px 0px 0px;
   overflow: hidden;
 }
 
@@ -83,6 +85,11 @@
   color: transparent;
 }
 
+.hero__text {
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
 .hero__content > [data-hero-anim='cta'] {
   display: inline-flex;
 }
@@ -115,7 +122,7 @@
   position: absolute;
   left: 51%;
   right: auto;
-  bottom: -48px;
+  bottom: -1px;
   z-index: 3;
   display: block;
   width: 100%;
@@ -124,6 +131,8 @@
   line-height: 0;
   transform: translateX(-50%);
   pointer-events: none;
+
+  filter: drop-shadow(5px 5px 42px #f8f9eb);
 }
 
 .hero__edge picture {
@@ -139,7 +148,6 @@
   height: auto;
   margin-left: -12%;
   object-fit: fill;
-  filter: drop-shadow(5px 5px 42px #ffffff);
 }
 
 /* Hide reveal targets only when JS is available — avoids blank hero if modules fail */
@@ -202,8 +210,6 @@ html.js .hero:not([data-hero-ready]) .hero__edge-img {
 
   .hero__edge {
     left: 0;
-    /* PNG transparent bottom padding ~35px at 1024w → ~49px at 1440, +1px lower */
-    bottom: -1px;
     transform: none;
   }
 

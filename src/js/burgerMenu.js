@@ -1,7 +1,7 @@
 const openBtnEl = document.querySelector('[data-action="open"]');
 const closeBtnEl = document.querySelector('[data-action="close"]');
-const burgerMenuEl = document.querySelector('#mobile-menu');
-const menuLinks = document.querySelectorAll('.mobile-menu__link');
+const burgerMenuEl = document.querySelector('[mobile-menu]');
+const menuLinks = document.querySelectorAll('[mobile-menu__link]');
 
 function openMenu() {
   if (!burgerMenuEl || !openBtnEl) return;

@@ -52,7 +52,7 @@
   </div>
 </header>
 
-<div class="mobile-menu" id="mobile-menu" data-visible="close" hidden>
+<div class="mobile-menu" mobile-menu data-visible="close" hidden>
   <div class="mobile-menu__bar">
     <a class="header__logo" href="./index.html" aria-label="Hexa Diamonds home">
       <img
@@ -91,11 +91,21 @@
       />
     </div>
     <nav class="mobile-menu__nav" aria-label="Mobile">
-      <a class="mobile-menu__link" href="{=$home}#about">About the Game</a>
-      <a class="mobile-menu__link" href="{=$home}#how-to-play">How to Play</a>
-      <a class="mobile-menu__link" href="{=$home}#features">Features</a>
-      <a class="mobile-menu__link" href="{=$home}#reviews">Reviews</a>
-      <a class="mobile-menu__link" href="{=$home}#contact">Contact</a>
+      <a class="mobile-menu__link" mobile-menu__link href="{=$home}#about"
+        >About the Game</a
+      >
+      <a class="mobile-menu__link" mobile-menu__link href="{=$home}#how-to-play"
+        >How to Play</a
+      >
+      <a class="mobile-menu__link" mobile-menu__link href="{=$home}#features"
+        >Features</a
+      >
+      <a class="mobile-menu__link" mobile-menu__link href="{=$home}#reviews"
+        >Reviews</a
+      >
+      <a class="mobile-menu__link" mobile-menu__link href="{=$home}#contact"
+        >Contact</a
+      >
     </nav>
     <div class="header__cta-menu">
       <load src="partials/google-play.html" class="" />

@@ -153,6 +153,8 @@
 
   .features__item--cat .features__video {
     aspect-ratio: 302 / 390;
+
+    max-height: 349px;
   }
   .features__item--calming {
     order: 6;

@@ -203,7 +203,7 @@ html.js .hero:not([data-hero-ready]) .hero__edge-img {
   .hero__edge {
     left: 0;
     /* PNG transparent bottom padding ~35px at 1024w → ~49px at 1440, +1px lower */
-    bottom: -50px;
+    bottom: -1px;
     transform: none;
   }
 

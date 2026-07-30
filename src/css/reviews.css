@@ -13,6 +13,8 @@
   width: 100%;
   height: auto;
   pointer-events: none;
+
+  filter: drop-shadow(5px 5px 42px #ffffff);
 }
 
 .reviews__header {

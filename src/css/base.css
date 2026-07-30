@@ -76,7 +76,11 @@ body {
 
 * {
   scrollbar-width: thin;
-  scrollbar-color: color-mix(in srgb, var(--neutral-light-grey) 70%, transparent)
+  scrollbar-color: color-mix(
+      in srgb,
+      var(--neutral-light-grey) 70%,
+      transparent
+    )
     transparent;
 }
 
@@ -122,7 +126,7 @@ main {
 .footer,
 .legal {
   width: 100%;
-  max-width: var(--layout-desktop);
+  max-width: var(--layout-mobile);
   margin-inline: auto;
 }
 
@@ -167,6 +171,20 @@ img {
 @media only screen and (min-width: 1440px) {
   html {
     scroll-padding-top: calc(var(--header-height-desktop) + 24px);
+  }
+
+  .header,
+  .hero,
+  .about,
+  .how-to-play,
+  .features,
+  .reviews,
+  .contact,
+  .footer,
+  .legal {
+    width: 100%;
+    max-width: var(--layout-desktop);
+    margin-inline: auto;
   }
 
   .section-label {

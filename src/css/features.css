@@ -99,7 +99,7 @@
 
 .features__item--cat .features__video {
   aspect-ratio: 158 / 203;
-  height: auto;
+  max-height: 180px;
 }
 
 .features__bird {

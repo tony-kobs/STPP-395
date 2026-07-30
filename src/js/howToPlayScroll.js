@@ -33,8 +33,8 @@ if (list) {
 
     dots.forEach((dot, index) => {
       const dist = Math.abs(index - activeFrame);
-      dot.dataset.dist = String(dist);
-      dot.classList.toggle('is-active', dist === 0);
+      dot.dataset.dist = dist === 1 ? '1' : '';
+      dot.dataset.active = dist === 0 ? 'true' : 'false';
     });
   };
 

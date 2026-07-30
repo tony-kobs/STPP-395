@@ -195,8 +195,7 @@
   height: 18px;
 }
 
-.how-to-play__dot[data-dist='0'],
-.how-to-play__dot.is-active {
+.how-to-play__dot[data-active='true'] {
   width: 22px;
   height: 22px;
   background-color: var(--accent-razzle-dazzle-rose);

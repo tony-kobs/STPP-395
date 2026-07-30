@@ -55,6 +55,7 @@ if (slider && track && prevBtn && nextBtn) {
     'touchstart',
     e => {
       startX = e.touches[0].clientX;
+      currentX = startX;
     },
     { passive: true }
   );

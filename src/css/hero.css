@@ -132,7 +132,7 @@
   transform: translateX(-50%);
   pointer-events: none;
 
-  filter: drop-shadow(5px 5px 42px #f8f9eb);
+  filter: drop-shadow(5px 5px 42px #ffffff);
 }
 
 .hero__edge picture {
